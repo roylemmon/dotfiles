@@ -1,0 +1,70 @@
+! ---------------------------------------------------
+! file:     ~/.Xresources
+! author:   jason ryan - http://jasonwryan.com/
+! vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+! ---------------------------------------------------
+
+! Urxvt
+URxvt.termName: rxvt
+URxvt.buffered: true
+URxvt.cursorColor: #395573
+URxvt.cursorUnderline: false
+URxvt.cursorBlink: false
+URxvt.geometry: 80x22
+URxvt.transparent: 0
+URxvt*urgentOnBell: true
+URxvt.lineSpace: 0
+URxvt.letterSpace: -1
+URxvt*scrollBar_right: false
+URxvt*scrollBar: false
+URxvt*borderLess: false
+URxvt*intensityStyles: false
+
+! -- Fonts -- !
+!URxvt*font:xft:Inconsolatazi4:medium:size=10, \
+!    xft:unifont:medium
+!URxvt*boldFont:xft:Inconsolatazi4:medium:size=10, \
+!    xft:unifont:medium
+
+!URxvt*font:xft:dejavu sans mono:medium:size=16
+!URxvt*boldFont:xft:dejavu sans mono:medium:size=16
+!URxvt*font:xft:droid sans mono slashed:pixelsize=16
+!URxvt*boldFont:xft:droid sans mono slashed:pixelsize=16
+!URxvt*font:xft:luxi mono:regular:pixelsize=16
+!URxvt*boldFont:xft:luxi mono:regular:pixelsize=16
+
+URxvt*font:xft:Ubuntu Mono derivative Powerline:regular:size=16, \
+    xft:DejaVu Sans Mono for Powerline:regular
+!URxvt*font:xft:Droid Sans Mono for Powerline:regular:size=16
+
+! -- Colours -- !
+#include "/home/rlemmon/colours/zenburn"
+! #include "/home/rlemmon/solarized/xresources/solarized"
+
+! --  Extensions -- !
+URxvt.perl-ext-common:     matcher,keyboard-select,url-select,clipboard
+URxvt.keysym.M-Escape:     perl:keyboard-select:activate
+URxvt.keysym.M-u:          perl:url-select:select_next
+URxvt.keysym.M-s:          perl:keyboard-select:search
+URxvt.clipboard.autocopy:  true
+URxvt.keysym.M-c:          perl:clipboard:copy
+URxvt.keysym.M-v:          perl:clipboard:paste
+URxvt.keysym.M-C-v:        perl:clipboard:paste_escaped
+! URxvt.url-select.launcher: /home/rlemmon/Scripts/vimbtab
+URxvt.url-select.launcher: firefox
+URxvt.matcher.rend.0:      -Uline fg16
+URxvt.matcher.button:      1
+
+! -- Xterm settings -- !
+xterm*termName: xterm-256color
+XTerm*locale: true
+xterm*cursorColor: #395573
+xterm*toolBar: false
+xterm*scrollBar: false
+xterm*rightScrollBar: false
+xterm*background: #1A1A1A
+xterm*foreground: #999999
+! xterm*faceName:size=14
+!xterm*font: *-fixed-*-*-*-18-*
+xterm*faceSize: 14
+xterm*allowBoldFonts: false
